@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function(){
     document.querySelectorAll("button[class*='btn_']").forEach(element=>{
         element.addEventListener('click', function(element){
             if(equal_button){
-                document.querySelectorAll('input').value="";
-                document.querySelectorAll('.grid-input').textContent="";
+                document.querySelector('input').value="";
+                document.querySelector('.grid-input').textContent="";
                 equal_button=false;
             }
             if(isNaN(parseFloat(document.querySelector('input').value.slice(-1)))===true&&document.querySelector('input').value.slice(-1)!=='.')
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
  // Вычисление результата
  document.querySelector('.equal').addEventListener('click', function(){
-    if(isNaN(parseFloat(document.querySelector('input').value.slice(-1)))===0)
+    if(isNaN(parseFloat(document.querySelector('input').value.slice(-1)))==0)
     {
         document.querySelector('input').value=eval(document.querySelector('input').value);
         document.querySelector('.gray-input').textContent=document.querySelector('input').value;

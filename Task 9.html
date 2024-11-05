@@ -3,72 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Task 9</title>
-    <link rel="stylesheet" type="text/css" href="style 9.css">
-    <script src="script 9.java"></script>
+    <link rel="stylesheet" type="text/css">
+    <script src="script 9.js"></script>
     <style>
         .container{
-            width: 650px;
-        }
+    width: 650px;
+}
 
-        button{
-            width: 120px;
-            height: 120px;
-            margin: 5px;
-            font-size: 48px;
-            text-align: center;
-        }
+button {
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    font-size: 48px;
+    text-align: center;
+}
 
-        table{
-            border: 5px solid #6DACD5;
-            margin: 20px;
-            padding: 15px;
-        }
-        
-        td{
-            width: 50%;
-            height: 50%;
-            max-width: 120px;
-            max-height: 120px;
-        }
+.btn_0 {
+    width:244px;
+}
 
-        input{
-            width: 600px;
-            height: 80px;
-            margin: 5px;
-            text-align: right;
-            font-size: 46px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            margin: 20px auto 20px 10px;
-            color: #AAA9A9;
-            pointer-events: none;
-        }
+.equal {
+    height: 255px;
+}
 
-        .gray-input{
-            position: absolute;
-            width: 600px;
-            height: 100px;
-            margin: 20px auto 20px 10px;
-            font-weight: 0;
-            font-size: 46px;
-            text-align: right;
-            pointer-events: none;
-            font-family: Calibri, sans-serif;
-        }
+table {
+    border:5px solid #6DACD5;
+    margin: 20px;
+    padding:15px;
+}
 
-        button{
-            animation: none;
-            transition: transform 0.5s ease;
-        }
-        button:active {
-            animation: pulse 0.2s ease;
-        }
-        .btn_0{
-            width: 240px;
-        }
+td {
+    width: 100%;
+    height: 100%;
+    max-width: 120px;
+    max-height: 120px;
+}
 
-        .equal{
-            height: 252px;
-        }
+input {
+    width: 608px;
+    height: 80px;
+    margin:5px;
+    font-size: 46px;
+    text-align: right;
+    pointer-events: none;
+    color: black;
+    font-family: Calibri, sans-serif;
+}
+
+.gray-input {
+    position: absolute;
+    width: 608px;
+    height: 80px;
+    margin: 20px auto 20px 9px;
+    font-weight: 0;
+    font-size: 46px;
+    text-align: right;
+    pointer-events: none;
+    font-family: Calibri, sans-serif;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button {
+    animation: none;
+    transition: transform 0.5s ease;
+}
+
+button:active {
+    animation: pulse 0.2s ease;
+}
     </style>
 </head>
 
@@ -78,14 +91,13 @@
             <tr>
                 <td colspan="5">
                     <div class="gray-input"></div>
-                    <input type="text">
+                    <input type="text" >
                 </td>
             </tr>
-
             <tr>
                 <td>
                     <button class="btn_7">7</button>
-                </td>            
+                </td>
                 <td>
                     <button class="btn_8">8</button>
                 </td>
@@ -99,7 +111,6 @@
                     <button class="delete">C</button>
                 </td>
             </tr>
-
             <tr>
                 <td>
                     <button class="btn_4">4</button>
@@ -114,10 +125,9 @@
                     <button class="operation">*</button>
                 </td>
                 <td>
-                    <button class="operation"><-</button>
+                    <button class="left"><-</button>
                 </td>
             </tr>
-
             <tr>
                 <td>
                     <button class="btn_1">1</button>
@@ -135,7 +145,6 @@
                     <button class="equal">=</button>
                 </td>
             </tr>
-
             <tr>
                 <td colspan="2">
                     <button class="btn_0">0</button>
@@ -149,5 +158,6 @@
             </tr>
         </table>
     </div>
+    
 </body>
 </html>
