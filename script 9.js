@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 document.querySelector('.gray-input').textContent = "";
                 equal_button = false;
             }
-            if(isNaN(parseFloat(document.querySelector('input').value.slice(-1))) === true && document.querySelector('input').value.slice(-1) !== '.')
+            if(isNaN(parseFloat(document.querySelector('input').value.slice(-1))) == true && document.querySelector('input').value.slice(-1) !== '.')
             {
                 document.querySelector('.gray-input').textContent = "";
             }
@@ -33,14 +33,15 @@ document.addEventListener('DOMContentLoaded', function(){
     document.querySelector('.gray-input').textContent=document.querySelector('.gray-input').textContent.slice(0,-1);
  })
 
+ // Операторы
  document.querySelectorAll('.operation').forEach(element=>{
     element.addEventListener('click', function(element){
         if(equal_button)
         {
             equal_button=false;
         }
-        if(document.querySelector('input').value.lenght!==0){
-            if(isNaN(parseFloat(document.querySelector('input').value.slice(-1)))===1)
+        if(document.querySelector('input').value.length!==0){
+            if(isNaN(parseFloat(document.querySelector('input').value.slice(-1)))==1)
             {
                 document.querySelector('input').value=document.querySelector('input').value.slice(0,-1);
                 document.querySelector('.gray-input').textContent=document.querySelector('.gray-input').textContent.slice(0,-1);
@@ -52,13 +53,16 @@ document.addEventListener('DOMContentLoaded', function(){
  })
 
  //Добавление точки
- document.querySelector('.dot').addEventListener('click', function(){
-    if(document.querySelector('input').value.slice(-1)!=='.')
-    {
-        document.querySelector('input').value+='.';
-        document.querySelector('.gray-input').textContent+='.';
-    }
- })
+ document.querySelector('.dot').addEventListener('click', function() {
+    const currentInput = document.querySelector('input').value;
+    const lastNumber = currentInput.split(/[\+\-\*\/]/).pop(); // Получаем текущее число
+
+    // Проверка, содержит ли текущее число уже точку
+    if (!lastNumber.includes('.')) {
+        document.querySelector('input').value += '.';
+        document.querySelector('.gray-input').textContent += '.';
+    } 
+});
 
  // Вычисление результата
  document.querySelector('.equal').addEventListener('click', function(){
